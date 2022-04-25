@@ -1,11 +1,11 @@
 std::uint64_t DeterministicClient::GetRandom() noexcept
-{    srand((unsigned) time(0));
-     int randomNumber = rand();
-   return  randomNumber;      
-    
-
-}
-
+std::uint64_t DeterministicClient::GetRandom() noexcept
+  {   std::uint64_t num = 0;
+  for(int i=0; i<64; i++) {
+    num = num*2 + rand()%2;
+    return num;
+  }
+  }
 
 # for header files 
 
